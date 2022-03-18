@@ -9,7 +9,7 @@ oldMask=umask((mode_t)0);
 printf("\n Old mask = %on",(int)oldMask);
 if(oldMask & S_IRGRP){
 printf("\nChanging group read permission from Masked to unmasked.n");
-oldMask=(oldMask ^ S_IRGRP);/* ^ Operator is binar XOR  operator, copies the bit if it is set in one operand but not in both. Exclusive or is a logical operator that outputs true only when inputs differ*/
+oldMask=(oldMask ^ S_IRGRP);
 }
 
 newMask=(oldMask|S_IWGRP|S_IXGRP);
